@@ -30,7 +30,7 @@ class ListaCompraTest extends TestCase
 
         $result = $listaCompra->hacer("añadir leche 3");
 
-        $this->assertEquals("leche x2", $result);
+        $this->assertEquals("leche x3", $result);
     }
 
 

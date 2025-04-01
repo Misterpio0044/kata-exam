@@ -12,13 +12,25 @@ class ListaCompraTest extends TestCase
     /**
      * @test
      */
-    public function añadirProductoDevuelveDichoProductoYSuCantidad(): void
+    public function añadirProductoSinCantidadDevuelveDichoProductoYCantidadUno(): void
     {
         $listaCompra = new ListaCompra();
 
         $result = $listaCompra->hacer("añadir leche");
 
         $this->assertEquals("leche x1", $result);
+    }
+
+    /**
+     * @test
+     */
+    public function añadirProductoConCantidadDevuelveDichoProductoYSuCantidad(): void
+    {
+        $listaCompra = new ListaCompra();
+
+        $result = $listaCompra->hacer("añadir leche 3");
+
+        $this->assertEquals("leche x2", $result);
     }
 
 

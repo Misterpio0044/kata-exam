@@ -8,15 +8,18 @@ use PHPUnit\Framework\TestCase;
 
 class ListaCompraTest extends TestCase
 {
+
     /**
      * @test
      */
-    public function añadirProductoDevuelveDichoProducto()
+    public function añadirProductoDevuelveDichoProductoYSuCantidad(): void
     {
         $listaCompra = new ListaCompra();
 
-        $result = $listaCompra->hacer("añadir pan");
+        $result = $listaCompra->hacer("añadir leche");
 
-        $this->assertEquals("pan", $result);
+        $this->assertEquals("leche x1", $result);
     }
+
+
 }

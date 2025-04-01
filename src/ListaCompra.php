@@ -8,9 +8,11 @@ class ListaCompra
 
     public function hacer(string $comando) : string
     {
-        $palabras = explode(" ", $comando);
+        $productos = explode(" ", $comando);
+        $cantidad = count($productos) - 1;
 
-        return $palabras[1] ?? "";
+        return $productos[1] . " x" . $cantidad;
     }
+
 
 }
